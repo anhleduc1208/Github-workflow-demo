@@ -8,7 +8,6 @@ jobs:
     steps:
       - run: |
           echo '${{ toJSON(github.env) }}'
-          # echo '${{ toJSON(jobs) }}'
           echo '${{secrets.ABC}}'
       # - uses: actions/checkout@v3
       # - uses: actions/setup-node@v3
