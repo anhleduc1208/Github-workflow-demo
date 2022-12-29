@@ -11,6 +11,7 @@ jobs:
     environment: TEST
     steps:
       - run: |
+          echo '${{ toJSON(github.ref) }}'
           echo '${{ toJSON(github.env) }}'
           echo '${{secrets.ABC1}}'
       # - uses: actions/checkout@v3
