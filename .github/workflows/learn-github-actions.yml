@@ -9,6 +9,7 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     environment: TEST
+    if: github.ref == 'refs/tags/*'
     steps:
       - run: |
           echo '${{ toJSON(github.ref) }}'
